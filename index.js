@@ -1,5 +1,4 @@
 'use strict';
-
 const connectdb =   require('./app/config/db');
 const http      =   require('http');
 const express   =   require('express'),
@@ -8,21 +7,21 @@ const express   =   require('express'),
     port = process.env.PORT || 3001,
     cors = require('cors');
 
-
 const httpServer = http.createServer(app);
 
 
-if(connectdb.connect)
+if(!connectdb.connect)
 {
-    console.log('DB is Connected :)!');
+    console.log('No connection at the moment :)!');
 }
 else
 {
-    console.log('No connection at the moment :)!');
+    console.log('DB is Connected');
 }
 
 // app.listen(port);
 console.log('API server started on ' + port);
+
 
 app.use(cors());
 app.use(express.static('public'));

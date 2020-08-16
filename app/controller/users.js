@@ -7,7 +7,10 @@ exports.getAll = (req, res) =>
     {
         if (err) 
         {
-            return res.status(500).send(err);
+            return res.status(500).send({
+                code: 'SQL error',
+                message: err
+            });
         } 
         else 
         {

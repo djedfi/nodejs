@@ -1,6 +1,5 @@
 'user strict';
 const config = require('./config');
-
 var mysql = require('mysql');
 
 //local mysql db connection

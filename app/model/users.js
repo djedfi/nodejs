@@ -13,7 +13,7 @@ Users.getAll       = (result) =>
   {
     if (err) 
     {
-      console.log("error: ", err);
+      //console.log("error: ", err);
       result(err, null);
     } 
     else 
@@ -26,8 +26,8 @@ Users.getAll       = (result) =>
 
 Users.getOne = (userId, result) => 
 {
-    //sql.query(`select * from users WHERE id_user = ${sql.escape(userId)}`, (err, res) => 
-    sql.query("select * from users WHERE id_user = ?",[userId], (err, res) => 
+    sql.query(`select * from users WHERE id_user = ${sql.escape(userId)}`, (err, res) => 
+    //sql.query("select * from users WHERE id_user = ?",[userId], (err, res) => 
     {
         if (err) 
         {
