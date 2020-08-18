@@ -14,7 +14,6 @@ module.exports = function(app)
         //let name = services.decodeToken(token);   
         //res.send();
     });
-
     app.route('/api/token').get(function(req,res){
         let token=services.createtoken();
         res.send(token);
