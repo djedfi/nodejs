@@ -11,7 +11,7 @@ function createtoken()
 {
     
     let payload     =   {id:5,name:'CARLOS'};
-    let token       =   jwt.sign(payload, privateKey, {algorithm: config.algorithm_cifrado,expiresIn:30});
+    let token       =   jwt.sign(payload, privateKey, {algorithm: config.algorithm_cifrado,expiresIn:60*60});
     return token;
 }
 
